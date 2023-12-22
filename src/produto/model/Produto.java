@@ -35,4 +35,10 @@ public abstract class Produto {
 	public void setValor(float valor) {
 		this.valor = valor;
 	}
+	
+	public void visualizar() {
+		System.out.println("Produto: " + this.nome);
+		System.out.println("Código: " + this.codigo);
+		System.out.println("Valor: R$ " + this.valor);
+	}
 }
