@@ -2,9 +2,9 @@ package produto.model;
 
 public abstract class Produto {
 	
-	String nome;
-	int codigo;
-	float valor;
+	private String nome;
+	private int codigo;
+	private float valor;
 	
 	public Produto(String nome, int codigo, float valor) {
 		this.nome = nome;
@@ -34,5 +34,11 @@ public abstract class Produto {
 
 	public void setValor(float valor) {
 		this.valor = valor;
+	}
+	
+	public void visualizar() {
+		System.out.println("Produto: " + this.nome);
+		System.out.println("Código: " + this.codigo);
+		System.out.println("Valor: R$ " + this.valor);
 	}
 }
