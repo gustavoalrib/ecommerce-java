@@ -1,14 +1,16 @@
 package produto.model;
 
 public abstract class Produto {
-	
+
 	private String nome;
 	private int codigo;
+	private int quantidade;
 	private float valor;
-	
-	public Produto(String nome, int codigo, float valor) {
+
+	public Produto(String nome, int codigo, int quantidade, float valor) {
 		this.nome = nome;
 		this.codigo = codigo;
+		this.quantidade = quantidade;
 		this.valor = valor;
 	}
 
@@ -28,6 +30,14 @@ public abstract class Produto {
 		this.codigo = codigo;
 	}
 
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	public float getValor() {
 		return valor;
 	}
@@ -35,10 +45,12 @@ public abstract class Produto {
 	public void setValor(float valor) {
 		this.valor = valor;
 	}
-	
+
 	public void visualizar() {
-		System.out.println("Produto: " + this.nome);
+		System.out.println("-- Dados do produto");
+		System.out.println("Nome: " + this.nome);
 		System.out.println("Código: " + this.codigo);
 		System.out.println("Valor: R$ " + this.valor);
+		System.out.println("Quantidade: " + this.quantidade);
 	}
 }

@@ -1,19 +1,20 @@
 package produto.model;
 
-public class ProdutoPromocao extends Produto {
-	
-	int desconto;
+public class Camiseta extends Produto {
 
-	public ProdutoPromocao(String nome, int codigo, float valor, int desconto) {
-		super(nome, codigo, valor);
-		this.desconto = desconto;
+	String cor;
+
+	public Camiseta(String nome, int codigo, int quantidade, float valor, String cor) {
+		super(nome, codigo, quantidade, valor);
+		this.cor = cor;
 	}
 
-	public int getDesconto() {
-		return desconto;
+	public String getCor() {
+		return cor;
 	}
 
-	public void setDesconto(int desconto) {
-		this.desconto = desconto;
+	public void setCor(String cor) {
+		this.cor = cor;
 	}
+
 }
