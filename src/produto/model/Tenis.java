@@ -4,8 +4,8 @@ public class Tenis extends Produto {
 
 	int tamanho;
 
-	public Tenis(String nome, int codigo, int quantidade, float valor, int tamanho) {
-		super(nome, codigo, quantidade, valor);
+	public Tenis(String nome, int tipo, int codigo, int quantidade, float valor, int tamanho) {
+		super(nome, tipo, codigo, quantidade, valor);
 		this.tamanho = tamanho;
 	}
 

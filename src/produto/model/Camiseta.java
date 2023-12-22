@@ -4,8 +4,8 @@ public class Camiseta extends Produto {
 
 	String cor;
 
-	public Camiseta(String nome, int codigo, int quantidade, float valor, String cor) {
-		super(nome, codigo, quantidade, valor);
+	public Camiseta(String nome, int tipo, int codigo, int quantidade, float valor, String cor) {
+		super(nome, tipo, codigo, quantidade, valor);
 		this.cor = cor;
 	}
 

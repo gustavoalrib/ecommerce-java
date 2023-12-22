@@ -37,9 +37,9 @@ public class ProdutoController implements ProdutoAcoes {
 
 		if (buscaProduto != null) {
 			listaProdutos.set(listaProdutos.indexOf(buscaProduto), produto);
-			System.out.println("\nO produto: " + produto.getNome() + " foi atualizado com sucesso!");
+			System.out.println("\nO produto: " + produto.getCodigo() + " foi atualizado com sucesso!");
 		} else
-			System.out.println("\nO produto: " + produto.getNome() + " não foi encontrado!");
+			System.out.println("\nO produto: " + produto.getCodigo() + " não foi encontrado!");
 	}
 
 	public int gerarCodigo() {

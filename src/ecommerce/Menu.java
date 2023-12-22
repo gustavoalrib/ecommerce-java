@@ -48,7 +48,7 @@ public class Menu {
 				System.out.println("Digite o nome do produto: ");
 				ler.skip("\\R?");
 				nome = ler.nextLine();
-				System.out.println("Digite o valor do produto: \nR$ ");
+				System.out.println("Digite o valor do produto: R$ ");
 				valor = ler.nextFloat();
 				System.out.println("Digite a quantidade do produto: ");
 				quantidade = ler.nextInt();
@@ -63,12 +63,12 @@ public class Menu {
 					System.out.println("Digite a cor da camiseta: ");
 					ler.skip("\\R?");
 					cor = ler.nextLine();
-					produtos.cadastrar(new Camiseta(nome, produtos.gerarCodigo(), quantidade, valor, cor));
+					produtos.cadastrar(new Camiseta(nome, tipo, produtos.gerarCodigo(), quantidade, valor, cor));
 				}
 				case 2 -> {
 					System.out.println("Digite o tamanho do tênis: ");
 					tamanho = ler.nextInt();
-					produtos.cadastrar(new Tenis(nome, produtos.gerarCodigo(), quantidade, valor, tamanho));
+					produtos.cadastrar(new Tenis(nome, tipo, produtos.gerarCodigo(), quantidade, valor, tamanho));
 				}
 				}
 
@@ -88,11 +88,32 @@ public class Menu {
 					System.out.println("Digite o nome do produto: ");
 					ler.skip("\\R?");
 					nome = ler.nextLine();
-					System.out.println("Digite o valor do produto: ");
+					System.out.println("Digite o valor do produto: R$ ");
 					valor = ler.nextFloat();
 					System.out.println("Digite a quantidade do produto: ");
 					quantidade = ler.nextInt();
-				}
+
+					tipo = buscaProduto.getTipo();
+
+					switch (tipo) {
+					case 1 -> {
+						System.out.println("Digite a cor da camiseta: ");
+						ler.skip("\\R?");
+						cor = ler.nextLine();
+						produtos.atualizar(new Camiseta(nome, codigo, tipo, quantidade, valor, cor));
+					}
+					case 2 -> {
+						System.out.println("Digite o tamanho do tênis: ");
+						tamanho = ler.nextInt();
+						produtos.atualizar(new Tenis(nome, codigo, tipo, quantidade, valor, tamanho));
+					}
+					default -> {
+						System.out.println("Tipo de produto inválido!");
+					}
+					}
+
+				} else
+					System.out.println("\nProduto não encontrado!");
 				break;
 			case 4:
 				System.out.println("Deletar um produto.");
