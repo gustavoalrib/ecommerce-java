@@ -2,9 +2,9 @@ package produto.model;
 
 public abstract class Produto {
 	
-	String nome;
-	int codigo;
-	float valor;
+	private String nome;
+	private int codigo;
+	private float valor;
 	
 	public Produto(String nome, int codigo, float valor) {
 		this.nome = nome;
