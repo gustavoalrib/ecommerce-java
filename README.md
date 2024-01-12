@@ -12,7 +12,7 @@
 * Collections.
 * Exceptions.
 
-### 📋 Requisitos do Projeto
+### 📋 Requisitos do projeto
 
 * Deve possuir pelo menos 1 Classe Abstrata (Classe Principal) e 1 Classe Estendida (Herança da Classe Principal).
 * O projeto Java deve possuir um menu inicial para executar as funcionalidades do projeto.
